@@ -526,16 +526,23 @@ nav {
 .image-container {
     position: relative;
     margin: 1rem 0;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .detail-content img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background-color: #f8f9fa;
-    min-height: 200px;
-    display: block;
     border: 3px solid transparent;
 }
 
@@ -743,6 +750,14 @@ body.dark-mode .benefit h3 {
 
 body.dark-mode .benefit p {
     color: #d5dbdb;
+}
+
+body.dark-mode .image-container {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c3e50 100%);
+}
+
+body.dark-mode .detail-content img {
+    border: 3px solid rgba(93, 173, 226, 0.3);
 }
 
 body.dark-mode .diagrams-section {
