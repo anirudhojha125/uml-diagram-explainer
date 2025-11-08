@@ -1,6 +1,7 @@
 from flask import Flask, send_from_directory, render_template
 import os
 
+# Fix image file names for Render compatibility
 app = Flask(__name__, static_folder='.')
 
 @app.route('/')
