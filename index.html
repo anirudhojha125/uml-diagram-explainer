@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UML Diagram Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">UML Explorer</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#diagrams">Diagrams</a></li>
+                <li><a href="#about">About</a></li>
+                <li><button id="dark-mode-toggle" class="dark-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Understand UML Diagrams Visually</h1>
+                <p>Interactive guide to Use Case, Activity, Class, and Sequence Diagrams</p>
+                <button class="cta-button">Explore Diagrams</button>
+            </div>
+        </section>
+
+        <section id="diagrams" class="diagrams-section">
+            <h2>UML Diagram Types</h2>
+            <div class="diagram-cards">
+                <div class="card" data-diagram="use-case">
+                    <div class="card-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Use Case Diagram</h3>
+                    <p>Illustrates the functionality of a system from a user's perspective</p>
+                </div>
+                <div class="card" data-diagram="activity">
+                    <div class="card-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Activity Diagram</h3>
+                    <p>Represents workflows and business processes</p>
+                </div>
+                <div class="card" data-diagram="class">
+                    <div class="card-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3>Class Diagram</h3>
+                    <p>Shows the structure of a system by displaying classes and relationships</p>
+                </div>
+                <div class="card" data-diagram="sequence">
+                    <div class="card-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Sequence Diagram</h3>
+                    <p>Depicts interactions between objects in a sequential order</p>
+                </div>
+            </div>
+            
+            <div class="diagram-details">
+                <div id="use-case-detail" class="detail-content">
+                    <h3>Use Case Diagram</h3>
+                    <p>Use case diagrams describe what a system does from the standpoint of an external observer. The people who use cases are often called actors, which can be people or other systems.</p>
+                    <div class="diagram-features">
+                        <div class="feature">
+                            <h4>Key Elements</h4>
+                            <ul>
+                                <li>Actors (Users of the system)</li>
+                                <li>Use Cases (Functionality)</li>
+                                <li>System Boundary</li>
+                                <li>Relationships</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <h4>When to Use</h4>
+                            <ul>
+                                <li>Requirements gathering</li>
+                                <li>System analysis</li>
+                                <li>Communication with stakeholders</li>
+                                <li>Project planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Use_case_restaurant_model.svg/1200px-Use_case_restaurant_model.svg.png" alt="Use Case Diagram Example" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOGY4Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRpYWdyYW0gSW1hZ2UgTG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=';">
+                    </div>
+                </div>
+                <div id="activity-detail" class="detail-content">
+                    <h3>Activity Diagram</h3>
+                    <p>Activity diagrams illustrate the business and operational step-by-step activities of a component or system. They show the flow from one activity to another and can model parallel activities.</p>
+                    <div class="diagram-features">
+                        <div class="feature">
+                            <h4>Key Elements</h4>
+                            <ul>
+                                <li>Activities (Actions)</li>
+                                <li>Control Flow (Arrows)</li>
+                                <li>Decision Nodes</li>
+                                <li>Start/End Points</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <h4>When to Use</h4>
+                            <ul>
+                                <li>Workflow modeling</li>
+                                <li>Business process analysis</li>
+                                <li>Algorithm visualization</li>
+                                <li>System behavior documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="https://i.postimg.cc/hvmXBJ7k/activity-diagram.png" alt="Activity Diagram Example" onerror="this.onerror=null; this.src='https://www.planttext.com/api/plantuml/png/SoWkIImgAStDuKhEIImkLd1EBCfCBSajuR9IKejBqdBJq5HAKI5A0afDBb5AukLMi594P4KMPUQavkQab-RcvG80W600';">
+                    </div>
+                </div>
+                <div id="class-detail" class="detail-content">
+                    <h3>Class Diagram</h3>
+                    <p>Class diagrams show the structure of a system by displaying its classes, attributes, operations, and relationships among objects. They are central to object-oriented modeling.</p>
+                    <div class="diagram-features">
+                        <div class="feature">
+                            <h4>Key Elements</h4>
+                            <ul>
+                                <li>Classes (Objects)</li>
+                                <li>Attributes (Properties)</li>
+                                <li>Methods (Functions)</li>
+                                <li>Relationships (Association, Inheritance)</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <h4>When to Use</h4>
+                            <ul>
+                                <li>System design</li>
+                                <li>Database schema design</li>
+                                <li>Code structure planning</li>
+                                <li>Documentation of existing systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="https://i.postimg.cc/FFmhQ5sK/class-diagram.png" alt="Class Diagram Example" onerror="this.onerror=null; this.src='https://www.planttext.com/api/plantuml/png/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80';">
+                    </div>
+                </div>
+                <div id="sequence-detail" class="detail-content">
+                    <h3>Sequence Diagram</h3>
+                    <p>Sequence diagrams show how objects interact in a sequential order over time. They display the messages exchanged between objects and the order in which they occur.</p>
+                    <div class="diagram-features">
+                        <div class="feature">
+                            <h4>Key Elements</h4>
+                            <ul>
+                                <li>Lifelines (Objects)</li>
+                                <li>Messages (Communication)</li>
+                                <li>Activation Boxes</li>
+                                <li>Combined Fragments</li>
+                            </ul>
+                        </div>
+                        <div class="feature">
+                            <h4>When to Use</h4>
+                            <ul>
+                                <li>Detailed interaction modeling</li>
+                                <li>System behavior analysis</li>
+                                <li>Real-time system design</li>
+                                <li>Complex scenario documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="https://i.postimg.cc/VkN9sL3P/sequence-diagram.png" alt="Sequence Diagram Example" onerror="this.onerror=null; this.src='https://www.planttext.com/api/plantuml/png/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKd1EBCejBIujKajCJbMevb9Gq5OQKI5A0af6INvgSd5nSN5gSKfYIMfHMc9oGc9EPdAgWbu10000';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About UML Diagrams</h2>
+            <p>The Unified Modeling Language (UML) is a general-purpose, developmental, modeling language in the field of software engineering that is intended to provide a standard way to visualize the design of a system.</p>
+            <div class="uml-benefits">
+                <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Standardization</h3>
+                    <p>Provides a common language for developers and stakeholders</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-brain"></i>
+                    <h3>Visualization</h3>
+                    <p>Makes complex systems easier to understand and communicate</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Design</h3>
+                    <p>Helps in designing systems before implementation</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 UML Diagram Explorer. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
