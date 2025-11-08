@@ -658,20 +658,20 @@ body.dark-mode header {
 }
 
 body.dark-mode .card {
-    background: #16213e;
+    background: linear-gradient(145deg, #1e2a3a, #16213e);
     border-color: #0f3460;
 }
 
 body.dark-mode .card h3 {
-    color: #3498db;
+    color: #5dade2;
 }
 
 body.dark-mode .card p {
-    color: #a9afc3;
+    color: #d5dbdb;
 }
 
 body.dark-mode .diagram-details {
-    background: #16213e;
+    background: rgba(22, 33, 62, 0.95);
     border-color: #0f3460;
 }
 
@@ -679,29 +679,62 @@ body.dark-mode .detail-content h3 {
     color: #fff;
 }
 
+body.dark-mode .detail-content p {
+    color: #e8e8e8;
+}
+
+body.dark-mode .expanded-content {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c3e50 100%);
+    border-left-color: #5dade2;
+}
+
+body.dark-mode .expanded-content h4 {
+    color: #5dade2;
+}
+
+body.dark-mode .expanded-content p {
+    color: #d5dbdb;
+}
+
+body.dark-mode .expanded-content ul li {
+    color: #e8e8e8;
+}
+
+body.dark-mode .expanded-content ul li::before {
+    color: #5dade2;
+}
+
 body.dark-mode .feature {
-    background: #1a1a2e;
-    border-left-color: #3498db;
+    background: linear-gradient(145deg, #1e2a3a, #16213e);
+    border-left-color: #5dade2;
 }
 
 body.dark-mode .feature h4 {
     color: #fff;
 }
 
+body.dark-mode .feature ul li {
+    color: #d5dbdb;
+}
+
 body.dark-mode .feature ul li::before {
-    color: #3498db;
+    color: #5dade2;
 }
 
 body.dark-mode .about-section {
-    background-color: #16213e;
+    background: rgba(22, 33, 62, 0.95);
 }
 
 body.dark-mode .about-section h2 {
     color: #fff;
 }
 
+body.dark-mode .about-section p {
+    color: #e8e8e8;
+}
+
 body.dark-mode .benefit {
-    background: #1a1a2e;
+    background: linear-gradient(145deg, #1e2a3a, #16213e);
 }
 
 body.dark-mode .benefit h3 {
@@ -709,7 +742,15 @@ body.dark-mode .benefit h3 {
 }
 
 body.dark-mode .benefit p {
-    color: #a9afc3;
+    color: #d5dbdb;
+}
+
+body.dark-mode .diagrams-section {
+    background: rgba(22, 33, 62, 0.95);
+}
+
+body.dark-mode .diagrams-section h2 {
+    color: #fff;
 }
 
 /* Responsive design */
