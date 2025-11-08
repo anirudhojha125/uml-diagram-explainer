@@ -68,6 +68,35 @@
                 <div id="use-case-detail" class="detail-content">
                     <h3>Use Case Diagram</h3>
                     <p>Use case diagrams describe what a system does from the standpoint of an external observer. The people who use cases are often called actors, which can be people or other systems.</p>
+                    
+                    <div class="expanded-content">
+                        <h4>📋 Detailed Explanation</h4>
+                        <p>A Use Case Diagram provides a high-level view of the system's functionality by showing:</p>
+                        <ul>
+                            <li><strong>Actors:</strong> External entities (users, other systems) that interact with the system</li>
+                            <li><strong>Use Cases:</strong> Specific functionalities or services the system provides</li>
+                            <li><strong>System Boundary:</strong> Defines what is inside vs outside the system</li>
+                            <li><strong>Relationships:</strong> Shows how actors interact with use cases</li>
+                        </ul>
+                        
+                        <h4>💡 Real-World Example</h4>
+                        <p>In an Online Shopping System:</p>
+                        <ul>
+                            <li>Actors: Customer, Admin, Payment Gateway</li>
+                            <li>Use Cases: Browse Products, Add to Cart, Make Payment, Manage Inventory</li>
+                            <li>The customer can browse products and make payments</li>
+                            <li>The admin can manage inventory and view orders</li>
+                        </ul>
+                        
+                        <h4>✅ Best Practices</h4>
+                        <ul>
+                            <li>Keep use cases at a high level - focus on "what" not "how"</li>
+                            <li>Name use cases with verb phrases (e.g., "Place Order")</li>
+                            <li>Identify all actors before defining use cases</li>
+                            <li>Don't overcomplicate - aim for clarity and simplicity</li>
+                        </ul>
+                    </div>
+                    
                     <div class="diagram-features">
                         <div class="feature">
                             <h4>Key Elements</h4>
@@ -95,6 +124,38 @@
                 <div id="activity-detail" class="detail-content">
                     <h3>Activity Diagram</h3>
                     <p>Activity diagrams illustrate the business and operational step-by-step activities of a component or system. They show the flow from one activity to another and can model parallel activities.</p>
+                    
+                    <div class="expanded-content">
+                        <h4>📋 Detailed Explanation</h4>
+                        <p>Activity Diagrams are flowchart-like representations that model the workflow of a system:</p>
+                        <ul>
+                            <li><strong>Activities:</strong> Rounded rectangles representing actions or operations</li>
+                            <li><strong>Transitions:</strong> Arrows showing the flow between activities</li>
+                            <li><strong>Decision Nodes:</strong> Diamond shapes for conditional logic (if/else)</li>
+                            <li><strong>Fork/Join:</strong> Black bars showing parallel processes</li>
+                            <li><strong>Start/End Nodes:</strong> Filled circles marking beginning and end</li>
+                        </ul>
+                        
+                        <h4>💡 Real-World Example</h4>
+                        <p>In an Order Processing System:</p>
+                        <ul>
+                            <li>Start → Receive Order → Check Stock</li>
+                            <li>Decision: Stock Available?</li>
+                            <li>Yes: Process Payment → Package Order → Ship → End</li>
+                            <li>No: Notify Customer → Backorder → End</li>
+                            <li>Parallel: Update Inventory & Send Confirmation Email</li>
+                        </ul>
+                        
+                        <h4>✅ Best Practices</h4>
+                        <ul>
+                            <li>Start with initial node and end with final node</li>
+                            <li>Ensure all paths lead to an end state</li>
+                            <li>Use swimlanes to show responsibilities across departments</li>
+                            <li>Keep complex decisions simple - break into multiple diagrams if needed</li>
+                            <li>Use meaningful names for activities (verb + object)</li>
+                        </ul>
+                    </div>
+                    
                     <div class="diagram-features">
                         <div class="feature">
                             <h4>Key Elements</h4>
@@ -116,12 +177,45 @@
                         </div>
                     </div>
                     <div class="image-container">
-                        <img src="https://i.postimg.cc/hvmXBJ7k/activity-diagram.png" alt="Activity Diagram Example" onerror="this.onerror=null; this.src='https://www.planttext.com/api/plantuml/png/SoWkIImgAStDuKhEIImkLd1EBCfCBSajuR9IKejBqdBJq5HAKI5A0afDBb5AukLMi594P4KMPUQavkQab-RcvG80W600';">
+                        <img src="activity diagram.jpg" alt="Activity Diagram Example" onerror="this.onerror=null; this.src='https://www.planttext.com/api/plantuml/png/SoWkIImgAStDuKhEIImkLd1EBCfCBSajuR9IKejBqdBJq5HAKI5A0afDBb5AukLMi594P4KMPUQavkQab-RcvG80W600';">
                     </div>
                 </div>
                 <div id="class-detail" class="detail-content">
                     <h3>Class Diagram</h3>
                     <p>Class diagrams show the structure of a system by displaying its classes, attributes, operations, and relationships among objects. They are central to object-oriented modeling.</p>
+                    
+                    <div class="expanded-content">
+                        <h4>📋 Detailed Explanation</h4>
+                        <p>Class Diagrams are the backbone of object-oriented design, showing:</p>
+                        <ul>
+                            <li><strong>Classes:</strong> Blueprints for objects with three compartments (Name, Attributes, Methods)</li>
+                            <li><strong>Attributes:</strong> Data members with visibility (+public, -private, #protected)</li>
+                            <li><strong>Methods:</strong> Functions that define behavior</li>
+                            <li><strong>Association:</strong> Line connecting related classes</li>
+                            <li><strong>Inheritance:</strong> Arrow showing parent-child relationships</li>
+                            <li><strong>Aggregation/Composition:</strong> "Has-a" relationships</li>
+                        </ul>
+                        
+                        <h4>💡 Real-World Example</h4>
+                        <p>In a Library Management System:</p>
+                        <ul>
+                            <li><strong>Person</strong> (parent class) → Student, Librarian (inheritance)</li>
+                            <li><strong>Book</strong> class: attributes (title, ISBN, author), methods (borrow(), return())</li>
+                            <li><strong>Library</strong> has many Books (composition)</li>
+                            <li><strong>Student</strong> borrows Books (association with multiplicity 0..*)</li>
+                            <li><strong>Author</strong> writes Books (one-to-many relationship)</li>
+                        </ul>
+                        
+                        <h4>✅ Best Practices</h4>
+                        <ul>
+                            <li>Use proper naming conventions (PascalCase for classes)</li>
+                            <li>Show only relevant attributes and methods</li>
+                            <li>Use abstract classes and interfaces for common behavior</li>
+                            <li>Indicate multiplicity on associations (1, 0..1, 0..*, 1..*)</li>
+                            <li>Group related classes together visually</li>
+                        </ul>
+                    </div>
+                    
                     <div class="diagram-features">
                         <div class="feature">
                             <h4>Key Elements</h4>
@@ -143,12 +237,49 @@
                         </div>
                     </div>
                     <div class="image-container">
-                        <img src="https://i.postimg.cc/FFmhQ5sK/class-diagram.png" alt="Class Diagram Example" onerror="this.onerror=null; this.src='https://www.planttext.com/api/plantuml/png/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80';">
+                        <img src="class diagram.png" alt="Class Diagram Example" onerror="this.onerror=null; this.src='https://www.planttext.com/api/plantuml/png/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80';">
                     </div>
                 </div>
                 <div id="sequence-detail" class="detail-content">
                     <h3>Sequence Diagram</h3>
                     <p>Sequence diagrams show how objects interact in a sequential order over time. They display the messages exchanged between objects and the order in which they occur.</p>
+                    
+                    <div class="expanded-content">
+                        <h4>📋 Detailed Explanation</h4>
+                        <p>Sequence Diagrams focus on the time-ordered sequence of messages:</p>
+                        <ul>
+                            <li><strong>Lifelines:</strong> Vertical dashed lines representing objects over time</li>
+                            <li><strong>Activation Boxes:</strong> Narrow rectangles showing when object is active</li>
+                            <li><strong>Messages:</strong> Horizontal arrows between lifelines (sync/async)</li>
+                            <li><strong>Return Messages:</strong> Dashed arrows showing return values</li>
+                            <li><strong>Combined Fragments:</strong> Frames for loops, conditionals (alt, opt, loop)</li>
+                            <li><strong>Actors:</strong> Stick figures representing external users</li>
+                        </ul>
+                        
+                        <h4>💡 Real-World Example</h4>
+                        <p>In an ATM Withdrawal System:</p>
+                        <ul>
+                            <li><strong>User</strong> → ATM: insertCard()</li>
+                            <li><strong>ATM</strong> → Bank: validateCard()</li>
+                            <li><strong>Bank</strong> → ATM: cardValid(true)</li>
+                            <li><strong>User</strong> → ATM: enterPIN()</li>
+                            <li><strong>ATM</strong> → Bank: verifyPIN()</li>
+                            <li><strong>Alt fragment:</strong> If valid → process, else → reject</li>
+                            <li><strong>ATM</strong> → Cash Dispenser: dispenseCash(amount)</li>
+                            <li><strong>Bank</strong> → Database: updateBalance()</li>
+                        </ul>
+                        
+                        <h4>✅ Best Practices</h4>
+                        <ul>
+                            <li>Arrange objects left to right in logical order</li>
+                            <li>Use synchronous messages for immediate responses</li>
+                            <li>Use asynchronous for non-blocking operations</li>
+                            <li>Label messages clearly with parameters</li>
+                            <li>Keep diagrams focused on one scenario/use case</li>
+                            <li>Number messages for complex interactions</li>
+                        </ul>
+                    </div>
+                    
                     <div class="diagram-features">
                         <div class="feature">
                             <h4>Key Elements</h4>
@@ -170,7 +301,7 @@
                         </div>
                     </div>
                     <div class="image-container">
-                        <img src="https://i.postimg.cc/VkN9sL3P/sequence-diagram.png" alt="Sequence Diagram Example" onerror="this.onerror=null; this.src='https://www.planttext.com/api/plantuml/png/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKd1EBCejBIujKajCJbMevb9Gq5OQKI5A0af6INvgSd5nSN5gSKfYIMfHMc9oGc9EPdAgWbu10000';">
+                        <img src="Sequence-Diagram-Place-Order.png" alt="Sequence Diagram Example" onerror="this.onerror=null; this.src='https://www.planttext.com/api/plantuml/png/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKd1EBCejBIujKajCJbMevb9Gq5OQKI5A0af6INvgSd5nSN5gSKfYIMfHMc9oGc9EPdAgWbu10000';">
                     </div>
                 </div>
             </div>
