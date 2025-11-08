@@ -1,0 +1,60 @@
+========================================
+UML DIAGRAM EXPLAINER - DEPLOYMENT GUIDE
+========================================
+
+Your project is now ready for Render deployment!
+
+STEP 1: CREATE GITHUB REPOSITORY
+---------------------------------
+1. Go to: https://github.com/new
+2. Repository name: uml-diagram-explainer
+3. Description: Interactive UML Diagram Explorer with explanations
+4. Visibility: Public
+5. DO NOT initialize with README, .gitignore, or license
+6. Click "Create repository"
+
+STEP 2: PUSH CODE TO GITHUB
+----------------------------
+The code is already committed. Just run:
+
+git push -u origin main
+
+If you get an error, you may need to authenticate:
+- Use your GitHub username and Personal Access Token (not password)
+- Create token at: https://github.com/settings/tokens
+
+STEP 3: DEPLOY ON RENDER
+-------------------------
+1. Go to: https://render.com
+2. Sign in with your GitHub account
+3. Click "New +" → "Web Service"
+4. Connect your GitHub account if needed
+5. Select the "uml-diagram-explainer" repository
+6. Configure:
+   - Name: uml-diagram-explainer
+   - Environment: Python 3
+   - Build Command: pip install -r requirements.txt
+   - Start Command: gunicorn wsgi:application
+   - Instance Type: Free
+7. Click "Create Web Service"
+
+STEP 4: WAIT FOR DEPLOYMENT
+----------------------------
+- Render will automatically build and deploy
+- Takes about 2-5 minutes
+- You'll get a URL like: https://uml-diagram-explainer.onrender.com
+
+FILES CREATED FOR DEPLOYMENT:
+------------------------------
+✓ app.py - Flask application
+✓ wsgi.py - WSGI entry point for Gunicorn
+✓ requirements.txt - Python dependencies
+✓ render.yaml - Render configuration
+✓ .gitignore - Git ignore rules
+
+All images are included in the repository:
+✓ activity diagram.jpg
+✓ class diagram.png
+✓ Sequence-Diagram-Place-Order.png
+
+========================================
