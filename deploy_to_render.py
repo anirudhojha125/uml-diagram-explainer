@@ -29,6 +29,17 @@ def check_requirements():
             print(f"  - {file}")
         return False
     
+    # Check requirements.txt content
+    try:
+        with open('requirements.txt', 'r') as f:
+            content = f.read()
+            if 'gunicorn' not in content:
+                print("Warning: gunicorn not found in requirements.txt")
+            if 'Flask' not in content:
+                print("Warning: Flask not found in requirements.txt")
+    except Exception as e:
+        print(f"Warning: Could not read requirements.txt: {e}")
+    
     return True
 
 def check_image_files():
@@ -84,6 +95,12 @@ def main():
     print("5. The application will be deployed at a URL like:")
     print("   https://your-app-name.onrender.com")
     print("\nYour application should now be ready for deployment!")
+    
+    # Additional troubleshooting tips
+    print("\nTroubleshooting Tips:")
+    print("- If images don't load, check that all image files are in the repository")
+    print("- If the app crashes, check the logs in the Render dashboard")
+    print("- Make sure all dependencies in requirements.txt are compatible")
 
 if __name__ == "__main__":
     main()
