@@ -1,6 +1,8 @@
 // DOM Elements
-const diagramCards = document.querySelectorAll('.card');
+const diagramCards = document.querySelectorAll('.card[data-diagram]');
+const teamCards = document.querySelectorAll('.card[data-member]');
 const detailContents = document.querySelectorAll('.detail-content');
+const memberDetails = document.querySelectorAll('#student-developer-detail, #supervising-instructor-detail, #class-contributors-detail');
 const ctaButton = document.querySelector('.cta-button');
 const diagramsSection = document.getElementById('diagrams');
 const navLinks = document.querySelectorAll('.nav-links a');
@@ -19,6 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Scroll to details section
             document.querySelector('.diagram-details').scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'nearest'
+            });
+        });
+    });
+    
+    // Add event listeners to team member cards
+    teamCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const memberType = this.getAttribute('data-member');
+            showMemberDetail(memberType);
+            
+            // Scroll to details section
+            document.querySelector('.member-details').scrollIntoView({ 
                 behavior: 'smooth', 
                 block: 'nearest'
             });
@@ -94,9 +110,49 @@ function showDiagram(diagramType) {
     animateDiagramChange();
 }
 
+// Function to show a specific team member detail
+function showMemberDetail(memberType) {
+    // Hide all member detail contents
+    memberDetails.forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    // Show the member details section
+    document.querySelector('.member-details').style.display = 'block';
+    
+    // Show the selected member detail
+    const selectedDetail = document.getElementById(`${memberType}-detail`);
+    if (selectedDetail) {
+        selectedDetail.classList.add('active');
+    }
+    
+    // Update active card styling
+    teamCards.forEach(card => {
+        if (card.getAttribute('data-member') === memberType) {
+            card.classList.add('active');
+        } else {
+            card.classList.remove('active');
+        }
+    });
+    
+    // Add animation effect
+    animateMemberChange();
+}
+
 // Function to add animation effect when changing diagrams
 function animateDiagramChange() {
     const detailContainer = document.querySelector('.diagram-details');
+    detailContainer.style.opacity = '0';
+    
+    setTimeout(() => {
+        detailContainer.style.transition = 'opacity 0.3s ease';
+        detailContainer.style.opacity = '1';
+    }, 10);
+}
+
+// Function to add animation effect when changing member details
+function animateMemberChange() {
+    const detailContainer = document.querySelector('.member-details');
     detailContainer.style.opacity = '0';
     
     setTimeout(() => {
@@ -137,7 +193,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.card, .team-member').forEach(card => {
+document.querySelectorAll('.card').forEach(card => {
     observer.observe(card);
 });
 

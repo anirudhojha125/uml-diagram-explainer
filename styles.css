@@ -795,7 +795,7 @@ body.dark-mode .diagrams-section h2 {
 
 .team-members {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -834,6 +834,40 @@ body.dark-mode .diagrams-section h2 {
 
 .team-member p strong {
     color: #2c3e50;
+}
+
+/* Member details section */
+.member-details {
+    margin-top: 2rem;
+    display: none;
+}
+
+.member-details .detail-content {
+    display: none;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.member-details .detail-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.member-details .detail-content h3 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.member-details .detail-content p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
 }
 
 .project-info {
@@ -903,6 +937,18 @@ body.dark-mode .team-member p strong {
 
 body.dark-mode .member-icon {
     color: #5dade2;
+}
+
+body.dark-mode .member-details .detail-content {
+    background: #1e2a3a;
+}
+
+body.dark-mode .member-details .detail-content h3 {
+    color: #fff;
+}
+
+body.dark-mode .member-details .detail-content p {
+    color: #e8e8e8;
 }
 
 /* Responsive design */
