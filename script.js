@@ -2,7 +2,7 @@
 const diagramCards = document.querySelectorAll('.card[data-diagram]');
 const teamCards = document.querySelectorAll('.card[data-member]');
 const detailContents = document.querySelectorAll('.detail-content');
-const memberDetails = document.querySelectorAll('#student-developer-detail, #student-developer-2-detail, #supervising-instructor-detail, #class-contributors-detail');
+const memberDetails = document.querySelectorAll('#student-developer-primary-detail, #anirudh-detail, #shrushti-detail, #supervising-instructor-detail, #class-contributors-detail');
 const ctaButton = document.querySelector('.cta-button');
 const diagramsSection = document.getElementById('diagrams');
 const navLinks = document.querySelectorAll('.nav-links a');
@@ -38,6 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 behavior: 'smooth', 
                 block: 'nearest'
             });
+        });
+    });
+    
+    // Add event listeners to developer options
+    document.querySelectorAll('.developer-option').forEach(option => {
+        option.addEventListener('click', function() {
+            const developerType = this.getAttribute('data-developer');
+            showDeveloperDetail(developerType);
         });
     });
     
@@ -139,6 +147,23 @@ function showMemberDetail(memberType) {
     animateMemberChange();
 }
 
+// Function to show a specific developer detail
+function showDeveloperDetail(developerType) {
+    // Hide all member detail contents
+    memberDetails.forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    // Show the selected developer detail
+    const selectedDetail = document.getElementById(`${developerType}-detail`);
+    if (selectedDetail) {
+        selectedDetail.classList.add('active');
+    }
+    
+    // Add animation effect
+    animateMemberChange();
+}
+
 // Function to add animation effect when changing diagrams
 function animateDiagramChange() {
     const detailContainer = document.querySelector('.diagram-details');
@@ -193,7 +218,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.card').forEach(card => {
+document.querySelectorAll('.card, .developer-option').forEach(card => {
     observer.observe(card);
 });
 

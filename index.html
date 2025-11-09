@@ -262,20 +262,12 @@
             <p>This UML Diagram Explorer was developed as a collaborative project. Click on any team member to see detailed information.</p>
             
             <div class="team-members">
-                <div class="card" data-member="student-developer">
+                <div class="card" data-member="student-developer-primary">
                     <div class="member-icon">
                         <i class="fas fa-user-graduate"></i>
                     </div>
-                    <h3>Anirudh Ojha</h3>
-                    <p>Student Developer</p>
-                </div>
-                
-                <div class="card" data-member="student-developer-2">
-                    <div class="member-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <h3>Shrushti Gupta</h3>
-                    <p>Student Developer</p>
+                    <h3>Student Developer</h3>
+                    <p>Primary & Secondary Developers</p>
                 </div>
                 
                 <div class="card" data-member="supervising-instructor">
@@ -296,7 +288,32 @@
             </div>
             
             <div class="member-details">
-                <div id="student-developer-detail" class="detail-content">
+                <!-- Student Developer Selection -->
+                <div id="student-developer-primary-detail" class="detail-content">
+                    <h3>Student Developers</h3>
+                    <p>Select a developer to view detailed information:</p>
+                    
+                    <div class="developer-selection">
+                        <div class="developer-option" data-developer="anirudh">
+                            <div class="member-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h4>Anirudh Ojha</h4>
+                            <p>Primary Developer</p>
+                        </div>
+                        
+                        <div class="developer-option" data-developer="shrushti">
+                            <div class="member-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h4>Shrushti Gupta</h4>
+                            <p>Secondary Developer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Individual Developer Details -->
+                <div id="anirudh-detail" class="detail-content">
                     <h3>Anirudh Ojha</h3>
                     <p>Created the core application, designed the user interface, and implemented all interactive features.</p>
                     
@@ -333,7 +350,7 @@
                     </div>
                 </div>
                 
-                <div id="student-developer-2-detail" class="detail-content">
+                <div id="shrushti-detail" class="detail-content">
                     <h3>Shrushti Gupta</h3>
                     <p>Assisted in frontend development, contributed to UI design, and helped with testing and documentation.</p>
                     

@@ -870,6 +870,49 @@ body.dark-mode .diagrams-section h2 {
     line-height: 1.7;
 }
 
+/* Developer selection */
+.developer-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.developer-option {
+    background: linear-gradient(145deg, #f8f9fa, #ffffff);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    text-align: center;
+}
+
+.developer-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+}
+
+.developer-option .member-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+.developer-option h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.developer-option p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
 .project-info {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 15px;
@@ -949,6 +992,23 @@ body.dark-mode .member-details .detail-content h3 {
 
 body.dark-mode .member-details .detail-content p {
     color: #e8e8e8;
+}
+
+body.dark-mode .developer-option {
+    background: linear-gradient(145deg, #16213e, #1e2a3a);
+    border: 1px solid rgba(93, 173, 226, 0.2);
+}
+
+body.dark-mode .developer-option h4 {
+    color: #fff;
+}
+
+body.dark-mode .developer-option p {
+    color: #d5dbdb;
+}
+
+body.dark-mode .developer-option:hover {
+    background: linear-gradient(145deg, #1e2a3a, #16213e);
 }
 
 /* Responsive design */
