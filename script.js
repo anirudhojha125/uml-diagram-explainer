@@ -2,7 +2,7 @@
 const diagramCards = document.querySelectorAll('.card[data-diagram]');
 const teamCards = document.querySelectorAll('.card[data-member]');
 const detailContents = document.querySelectorAll('.detail-content');
-const memberDetails = document.querySelectorAll('#student-developer-detail, #supervising-instructor-detail, #class-contributors-detail');
+const memberDetails = document.querySelectorAll('#student-developer-detail, #student-developer-2-detail, #supervising-instructor-detail, #class-contributors-detail');
 const ctaButton = document.querySelector('.cta-button');
 const diagramsSection = document.getElementById('diagrams');
 const navLinks = document.querySelectorAll('.nav-links a');
