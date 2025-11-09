@@ -9,10 +9,7 @@ def index():
 
 @app.route('/<path:filename>')
 def serve_static(filename):
-    # Special handling for image files to ensure they're served correctly
-    if filename.endswith(('.png', '.jpg', '.jpeg', '.gif', '.css', '.js')):
-        return send_from_directory('.', filename)
-    # For other files, try to serve them or return 404
+    # Handle all static files properly
     try:
         return send_from_directory('.', filename)
     except FileNotFoundError:
