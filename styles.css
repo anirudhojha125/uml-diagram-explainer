@@ -828,8 +828,12 @@ body.dark-mode .diagrams-section h2 {
 
 .team-member p {
     color: #666;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
     font-size: 1rem;
+}
+
+.team-member p strong {
+    color: #2c3e50;
 }
 
 .project-info {
@@ -891,6 +895,10 @@ body.dark-mode .team-member h3 {
 
 body.dark-mode .team-member p {
     color: #d5dbdb;
+}
+
+body.dark-mode .team-member p strong {
+    color: #fff;
 }
 
 body.dark-mode .member-icon {
