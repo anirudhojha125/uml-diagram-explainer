@@ -768,6 +768,135 @@ body.dark-mode .diagrams-section h2 {
     color: #fff;
 }
 
+/* Team section */
+.team-section {
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.team-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.team-member {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.member-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.team-member p {
+    color: #666;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.project-info {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    color: white;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.project-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-info ul li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.1rem;
+}
+
+.project-info ul li:last-child {
+    border-bottom: none;
+}
+
+.project-info ul li strong {
+    display: inline-block;
+    width: 120px;
+    color: #f0f0f0;
+}
+
+/* Dark mode styles for team section */
+body.dark-mode .team-section {
+    background: rgba(22, 33, 62, 0.95);
+}
+
+body.dark-mode .team-section h2 {
+    color: #fff;
+}
+
+body.dark-mode .team-section p {
+    color: #e8e8e8;
+}
+
+body.dark-mode .team-member {
+    background: linear-gradient(145deg, #1e2a3a, #16213e);
+    border: 1px solid rgba(93, 173, 226, 0.2);
+}
+
+body.dark-mode .team-member h3 {
+    color: #fff;
+}
+
+body.dark-mode .team-member p {
+    color: #d5dbdb;
+}
+
+body.dark-mode .member-icon {
+    color: #5dade2;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     nav {

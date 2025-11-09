@@ -137,7 +137,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.card').forEach(card => {
+document.querySelectorAll('.card, .team-member').forEach(card => {
     observer.observe(card);
 });
 
