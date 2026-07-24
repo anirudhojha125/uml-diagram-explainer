@@ -1,0 +1,13 @@
+{
+  "name": "uml-diagram-explainer",
+  "version": "1.0.0",
+  "description": "An interactive website to explain UML diagrams",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["uml", "diagrams", "education", "interactive"],
+  "author": "UML Explorer",
+  "license": "MIT"
+}
